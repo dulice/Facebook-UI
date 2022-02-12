@@ -92,6 +92,10 @@
   top: 2px;
 }
 
+.menu-bar {
+  display: none;
+}
+
 /* nav right     */
 .nav-right {
   width: 25%;
@@ -182,6 +186,7 @@
 .myday-list {
   margin: 0 10%;
   display: flex;
+  overflow: hidden;
 }
 
 .your-story {
@@ -298,15 +303,15 @@ posting and feeling */
   padding-left: 10px;
 }
 
-.fa-video {
+.fa-video-camera {
   color: var(--video-color);
 }
 
-.fa-images {
+.fa-image {
   color: var(--active-statur);
 }
 
-.fa-face-smile {
+.fa-smile-o {
   color: var(--emoji-color);
 }
 
@@ -319,6 +324,14 @@ posting and feeling */
   object-position: center;
 }
 
+.post-image {
+  width: 100%;
+}
+
+.post-image img {
+  width: 100%;
+}
+
 /* active user   */
 .active-room {
   margin: 1rem auto;
@@ -326,6 +339,7 @@ posting and feeling */
 
 .active {
   display: flex;
+  overflow: hidden;
 }
 
 .room {
@@ -417,4 +431,45 @@ posting and feeling */
 
 .contacts-nav i {
   margin: 0 1rem;
+}
+
+@media (max-width: 830px) {
+  .nav-right .profile {
+    display: none;
+  }
+  .gaming {
+    display: none;
+  }
+  .menu-bar {
+    display: inline-block;
+  }
+  .left-body {
+    display: none;
+  }
+  .center-body {
+    width: 100%;
+  }
+  .right-body {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav-left,
+  .nav-right,
+  .post-icon {
+    display: none;
+  }
+  .nav-center,
+  .left-body,
+  .myday-img {
+    width: 100%;
+  }
+  .your-story {
+    width: 70px;
+    height: 150px;
+  }
+  .profile-image.image {
+    top: -90px;
+  }
 }
